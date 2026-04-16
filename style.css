@@ -1,0 +1,244 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(135deg, #1e3a8a, #9333ea, #f97316);
+}
+
+body {
+  background: url("images/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+   width: 550px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  /* backdrop-filter: blur(15px); */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.1),  /* outer glow */
+    inset 0 0 10px rgba(255, 255, 255, 0.1); /* inner glow */
+}
+
+.container::before {
+  pointer-events: none;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.1)
+  );
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2{
+  color: #fff;
+  font-size: 24px;
+}
+
+.header .icons{
+  margin-right: 21px;
+  font-size: 23px;
+}
+
+.input-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.input-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  border-radius: 30px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 14px;
+}
+
+.input-section button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.input-section button:hover  {
+  background: #3b82f6;
+  transform: scale(1.05);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background: #3b82f6;
+  transform: scale(1.05);
+}
+
+ul li {
+  list-style: none;
+  user-select: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+#list-container {
+  max-height: 200px;   /* jitna tu chahe */
+  overflow-y: auto;
+}
+
+#list-container li::before {
+  background-image: url(images/unchecked.png);
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+
+#list-container .checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span{
+  position: absolute;
+  right: 0;
+  top:5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  /* color: #555; */
+  line-height: 40px;
+  text-align: center;
+  /* cursor: pointer; */
+  /* display: flex; */
+}
+
+ul li span:hover {
+  color: #ffffff;
+  background: transparent;
+  border-radius: 50%;
+}
+
+li.task::before {
+  background-image: url(images/unchecked.png);
+}
+
+#list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+#list-container::-webkit-scrollbar-thumb {
+  background: #d9c2c2;
+  border-radius: 10px;
+}
+
+#date-input {
+  display: block;
+  font-size: 12px;
+  color: #ddd;
+  margin-top: 4px;
+}
+
+.task-text {
+  font-size: 16px;
+  color: #fff;
+}
+
+.task-date {
+  font-size: 12px;
+  color: #16171b;  /* light bluish */
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.task-date {
+  font-size: 11px;
+  /* color: #93c5fd; */
+  letter-spacing: 0.5px;
+}
+
+.task-text {
+  font-size: 16px;
+  color: white;
+}
+
+.task-date {
+  font-size: 12px;
+  color: #93c5fd;
+  margin-top: 4px;
+}
+
+.filters button.active {
+  background: #3b82f6;
+}
+
+#task-count {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.priority-btn {
+  position: absolute;
+  right: 40px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.high-priority {
+  border-left: 4px solid red;
+}
