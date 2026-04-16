@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background: url("images/Background.png");
+  background: url("Background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ ul li {
 }
 
 #list-container li::before {
-  background-image: url(images/unchecked.png);
+  background-image: url(unchecked.png);
   content: "";
   position: absolute;
   height: 28px;
@@ -150,7 +150,7 @@ ul li.checked{
 }
 
 #list-container .checked::before {
-  background-image: url(images/checked.png);
+  background-image: url(checked.png);
 }
 
 ul li span{
@@ -174,7 +174,7 @@ ul li span:hover {
 }
 
 li.task::before {
-  background-image: url(images/unchecked.png);
+  background-image: url(unchecked.png);
 }
 
 #list-container::-webkit-scrollbar {
